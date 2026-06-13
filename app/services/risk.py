@@ -120,6 +120,7 @@ def run_full_analysis(
     return {
         "overall_risk":     rules_result["overall_risk"],
         "risk_color":       rules_result["risk_color"],
+        "matri_score":      final_score,
         "confidence_label": confidence_label,
         "confidence_note":  confidence_note,
         "domain_scores":    rules_result["domain_scores"],

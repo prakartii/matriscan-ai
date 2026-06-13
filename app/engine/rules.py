@@ -257,11 +257,12 @@ def run_rules_engine(vitals: VitalSigns, symptoms: Symptoms) -> Dict[str, Any]:
         risk_color   = "GREEN"
         base_score   = 10
 
-    # Matri score: base + weighted domain contributions
     domain_scores = {name: round(d["score"], 2) for name, d in domains.items()}
+
     return {
         "overall_risk":   overall_risk,
         "risk_color":     risk_color,
+        "matri_score":    base_score,
         "domain_scores":  domain_scores,
         "max_severity":   max_severity,
         "flagged_values": all_flags,
